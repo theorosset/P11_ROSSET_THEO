@@ -1,0 +1,20 @@
+@import '/src/app/sass/main.scss';
+
+.banniere {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+    &__image {
+        border-radius: $radius-medium;
+        filter: brightness(70%);
+    }
+
+    &__text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 25px;
+    }
+}
