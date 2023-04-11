@@ -18,15 +18,28 @@
         margin-left: 1rem;
         height: 340px;
         width: 350px;
+        position: relative;
+        text-align: left;
+        transition-duration: 500ms;
         &--img {
             height: 100%;
             width: 95%;
             border-radius: $radius-medium;
             object-fit: cover;
-            filter: brightness(90%);
+            filter: brightness(80%);
+
+        }
+        &:hover {
+            transform: scale(1.1);
+            transition-duration: 500ms;
         }
         &--title {
-            z-index: 2;
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+            font-size: 20px;
+            max-width: 10rem;
+            color: white;
         }
         &:nth-child(1) {
             margin-top: 0;
