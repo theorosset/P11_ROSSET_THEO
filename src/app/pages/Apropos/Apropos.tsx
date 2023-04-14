@@ -1,8 +1,26 @@
+import { FC, useEffect, useState } from "react"
+import Banniere from "../../Component/Banniere/Banniere"
+import { Collapse } from "../../Component/Collapse/Collapse"
 import Header from "../../Component/Header/Header"
+import axios from "axios"
 
-function Apropos() {
+const Apropos: FC = () => {
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        axios.get('./Apropos.json').then(res => setData(res.data)).catch((err) => console.log(err))
+    }, [])
+
     return (
-        <Header/>
+        <div className="app__container__apropos">
+            <Header/>
+            <Banniere isHome={false} />
+            {
+                data.map((element: {title: string, text: string}) => 
+                    <Collapse title={element.title} text={element.text} />
+                )
+            }
+        </div>
     )
 }
 

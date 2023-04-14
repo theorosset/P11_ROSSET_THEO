@@ -1,0 +1,39 @@
+@import '/src/app/sass/main.scss';
+
+
+.container__collapse {
+    max-width: 1023px;
+    margin: auto;
+    width: 100%;
+    margin-top: 2rem;
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 5px;
+        background-color: $primary-color;
+        color: white;
+        height: 3rem;
+    }
+    &__text {
+        position: relative;
+        top: -10px;
+        z-index: -2;
+        background-color: $secondary-color;
+        margin: auto;
+        width: 93.1%;
+        border-radius: $radius-small;
+
+        & > p {
+            padding-top: 2rem;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+            margin-top: 0;
+            color: $primary-color;
+        }
+    }
+}
