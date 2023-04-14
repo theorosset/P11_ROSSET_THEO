@@ -1,9 +1,9 @@
 import Header from '../../Component/Header/Header';
 import Banniere from '../../Component/Banniere/Banniere';
-import ArticleList from '../../Component/Article/ArticleList';
-import './Home.scss'
+import ArticleList from '../../Component/Article/ArticleList';  
+import { FC } from 'react';
 
-function App() {
+const  App: FC = () => {
   return (
     <div className="App">
           <Header />

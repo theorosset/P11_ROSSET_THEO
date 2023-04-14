@@ -4,14 +4,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 90%;
     max-width: 1240px;
     margin: auto;
     margin-top: 1rem;
     padding-left: 0;
-    background-color: #F7F7F7;
+    background-color: $secondary-color;
     padding-top: 50px;
     border-radius: $radius-large;
-    
     &__article {
         margin-top: 1.8rem;
         margin-right: 0.8rem;

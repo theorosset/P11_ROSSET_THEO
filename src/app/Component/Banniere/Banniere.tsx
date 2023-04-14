@@ -1,7 +1,12 @@
 import "./Banniere.scss"
+import { FC } from "react";
+import PropTypes, { InferProps } from 'prop-types';
 
-function Banniere(isHome: { isHome: boolean }) {
-    console.log(isHome)
+const propTypes = {
+    isHome: PropTypes.bool,
+}
+
+const Banniere: FC<InferProps<typeof propTypes>> = (isHome) => {
     if (isHome.isHome) {
         return (
             <div className="banniere">
