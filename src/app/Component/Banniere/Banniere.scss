@@ -4,9 +4,14 @@
     position: relative;
     text-align: center;
     color: white;
+    width: 100%;
     margin-top: 3rem;
     &__image {
-        border-radius: $radius-medium;
+        height: 223px;
+        width: 94%;
+        max-width: 1240px;
+        object-fit: cover;
+        border-radius: $radius-large;
         filter: brightness(70%);
     }
 
