@@ -12,12 +12,12 @@ const Apropos: FC = () => {
     }, [])
 
     return (
-        <div className="app__container__apropos">
+        <div>
             <Header/>
             <Banniere isHome={false} />
             {
-                data.map((element: {title: string, text: string}) => 
-                    <Collapse title={element.title} text={element.text} />
+                data.map((element: {title: string, text: string, id: number}) => 
+                    <Collapse key={element.id} title={element.title} text={element.text} />
                 )
             }
         </div>

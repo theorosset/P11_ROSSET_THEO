@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import "./header.scss"
-
+// navLink look if can get props isActive
 const Header = () => {
     return (
         <header className="header">

@@ -8,7 +8,7 @@ const  App: FC = () => {
     <div className="App">
           <Header />
           <Banniere isHome={true}/>
-          <div className='app__container--articles'>
+          <div>
             <ArticleList />
           </div>
     </div>

@@ -17,12 +17,11 @@ const Collapse: FC<InferProps<typeof propTypes>> = ({title, text}) => {
         setIsShow(show)
     }
 
-
     return (
         <div className="container__collapse">
             <div className="container__collapse__title" onClick={openCollapse}>
                 <p>{ title }</p>
-                <i className={`fas fa-chevron${isShow ? '-up' : '-down'}`}></i>
+                <i className={`fas fa-chevron-${isShow ? 'up' : 'down'}`}></i>
             </div>
             {  isShow &&
             <div className="container__collapse__text">

@@ -20,7 +20,7 @@ const ArticleList: FC = () => {
                 articles.map((article: Article) => (
                     <NavLink to={`/article`} className="container__article" key={article.id}>
                         <img className="container__article--img" src={article.cover} alt={article.title} />
-                         <p className="container__article--title">{article.title}</p>
+                        <p className="container__article--title">{article.title}</p>
                     </NavLink>
                 ))
             }
