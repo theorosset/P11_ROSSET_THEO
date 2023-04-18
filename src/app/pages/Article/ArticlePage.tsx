@@ -1,7 +1,11 @@
+import { FC } from "react"
+import Carousel from "../../Component/Carousel/Carousel"
 
-function ArticlePage() {
+const ArticlePage: FC = () => {
     return (
-        <h1>oui</h1>
+        <div>
+            <Carousel />
+        </div>
     )
 }
 
