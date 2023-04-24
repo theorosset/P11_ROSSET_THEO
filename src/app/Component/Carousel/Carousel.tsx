@@ -1,19 +1,30 @@
-import { FC, useEffect, useState } from "react";
-import { Article } from "../../Models/articles";
-import { useSearchParams } from "react-router-dom";
-import axios from "axios";
+import { useEffect, useState } from "react";
 
+const Carousel = ({ article } : any ) => {
+    const [imageRead, setImageRead] = useState(0);
 
+    function getNextImage() {
+        let imageNumber = imageRead
 
-const Carousel: FC = () => {
-    const [article, setArticle] = useState<Article>()
-    const [articleId, setArticleId] = useSearchParams()
-    useEffect(() => {
-        axios.get('./data.json').then((res: { data: Article[]}) => setArticle(res.data.find((article) => article.id === articleId.get('id'))) )
-    }, [])
+        if(imageNumber === article.pictures.length - 1) {
+            return setImageRead(0)
+        }
+        setImageRead(imageNumber + 1)
+    }
+
+    function getPrevImage() {
+        let imageNumber = imageRead
+        if(imageNumber === 0) {
+            return setImageRead(article.pictures.length - 1)
+        }
+        setImageRead(imageNumber - 1)
+    }
 
     return (
-        <h1>{article?.description}</h1>
+        <div>
+            <img src={ article?.pictures[imageRead] } onClick={getPrevImage} alt="appartement"/>
+            <h1>{article?.id} oui</h1>
+        </div>
     )
 }
 
