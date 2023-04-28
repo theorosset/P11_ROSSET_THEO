@@ -28,8 +28,8 @@ const Collapse: FC<InferProps<typeof propTypes>> = ({title, text, marginUse, equ
             {  isShow &&
             <div className="container__collapse__items">
                 { text && <p className="container__collapse__items--text">{ text }</p> }
-                { equipments && equipments.map((equipment) => (
-                    <p className="container__collapse__items--equipments">{equipment}</p>
+                { equipments && equipments.map((equipment, i) => (
+                    <p key={i} className="container__collapse__items--equipments">{equipment}</p>
                 )) }
             </div>
             }

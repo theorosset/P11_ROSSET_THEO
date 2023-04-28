@@ -4,12 +4,13 @@ import { Collapse } from "../../Component/Collapse/Collapse"
 import Header from "../../Component/Header/Header"
 import axios from "axios"
 import './Apropos.scss'
+import { aProposData } from "../../Models/aProposData"
 
 const Apropos: FC = () => {
-    const [data, setData] = useState([])
+    const [data, setData] = useState<aProposData[]>([])
 
     useEffect(() => {
-        axios.get('./Apropos.json').then(res => setData(res.data)).catch((err) => console.log(err))
+        axios.get<aProposData[]>('./Apropos.json').then((res) => setData(res.data)).catch((err) => console.log(err))
     }, [])
 
     return (

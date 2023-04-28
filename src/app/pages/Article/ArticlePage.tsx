@@ -16,7 +16,25 @@ const ArticlePage: FC = () => {
         .then((res: { data: Article[]}) => setArticle(res.data.find((article) => article.id === articleId.get('id')) ?? null))
         .catch((err) =>  console.error(err))
     }, [])
-    
+
+    function getStar() {
+        const starArray = []
+        const starMissing = []
+        if(article) {
+            for(let i = 0; i < article?.rating; i ++) {
+                starArray.push(i)
+            } 
+            for(let i = 0; i < 5; i++) {
+                if(!starArray.includes(i)) {
+                    starMissing.push(i)
+                }
+            }
+        }
+        return {
+                starColor: starArray,
+                starGrey: starMissing
+            }
+    }
 
     if (!article) {
         return <p>is Loading</p>
@@ -36,9 +54,21 @@ const ArticlePage: FC = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="container__articlePage__description--user">
-                    <p>{ article?.host.name }</p>
-                    <img src={ article?.host.picture } alt="vendeur" />
+                <div className="container__articlePage__description__user">
+                    <div className="container__articlePage__description__user--item">
+                        <p className="container__articlePage__description__user--name">{ article?.host.name }</p>
+                        <img className="container__articlePage__description__user--img" src={ article?.host.picture } alt="vendeur" />
+                    </div>
+                    {   
+                        getStar().starColor.map((x, key) => (
+                            <i key={key} className="starColor fas fa-star"></i>
+                        ))
+                    }
+                    { 
+                    getStar().starGrey.map((x, key) => (
+                         <i key={key} className="starGrey fas fa-star"></i>
+                     ))
+                     }
                 </div>
             </div>
             <div className="container__articlePage__collapse">
