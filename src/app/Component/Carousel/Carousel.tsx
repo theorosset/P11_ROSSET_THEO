@@ -28,7 +28,7 @@ const Carousel: FC<Props> = ({ article }) => {
 
     return (
         <div className="container__carousel">
-            <img className="container__carousel--img" src={ article?.pictures[imageRead] } onClick={getPrevImage} alt="appartement"/>
+            <img className="container__carousel--img" src={ article?.pictures[imageRead] } alt="appartement"/>
             { article?.pictures.length > 1 &&
             <div>
                 <i onClick={getPrevImage} className="container__carousel--iconLeft fas fa-chevron-left"></i>

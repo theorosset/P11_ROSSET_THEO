@@ -17,28 +17,9 @@ const ArticlePage: FC = () => {
         .catch((err) =>  console.error(err))
     }, [])
 
-    function getStar() {
-        const starArray = []
-        const starMissing = []
-        if(article) {
-            for(let i = 0; i < article?.rating; i ++) {
-                starArray.push(i)
-            } 
-            for(let i = 0; i < 5; i++) {
-                if(!starArray.includes(i)) {
-                    starMissing.push(i)
-                }
-            }
-        }
-        return {
-                starColor: starArray,
-                starGrey: starMissing
-            }
-    }
-
     if (!article) {
         return <p>is Loading</p>
-    } 
+    }
     
     return (
         <div className="container__articlePage">
@@ -59,15 +40,10 @@ const ArticlePage: FC = () => {
                         <p className="container__articlePage__description__user--name">{ article?.host.name }</p>
                         <img className="container__articlePage__description__user--img" src={ article?.host.picture } alt="vendeur" />
                     </div>
-                    {   
-                        getStar().starColor.map((x, key) => (
-                            <i key={key} className="starColor fas fa-star"></i>
+                     {
+                        Array.from({length: 5},(_, i) => (
+                            <i key={i} className={`${article.rating < i + 1 ? 'starGrey' : 'starColor'} fas fa-star`}></i>
                         ))
-                    }
-                    { 
-                    getStar().starGrey.map((x, key) => (
-                         <i key={key} className="starGrey fas fa-star"></i>
-                     ))
                      }
                 </div>
             </div>
