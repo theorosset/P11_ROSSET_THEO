@@ -49,9 +49,11 @@
     margin-top: 0;
     padding-top: 1rem;
     background-color: white;
+    &__link {
+        height: 300px
+    }
     &__article {
         width: 100%;
-        height: 255px;
         margin-left: 0;
         margin-right: 0;
 

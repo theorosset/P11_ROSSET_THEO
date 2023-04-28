@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 import router  from './app/Router/Router'
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from "react-router-dom";
+import Footer from './app/Component/Footer/Footer'
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
       <RouterProvider router={router} />
+      <Footer />
   </React.StrictMode>
 ) ;
 

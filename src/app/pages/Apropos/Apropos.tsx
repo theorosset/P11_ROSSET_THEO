@@ -3,6 +3,7 @@ import Banniere from "../../Component/Banniere/Banniere"
 import { Collapse } from "../../Component/Collapse/Collapse"
 import Header from "../../Component/Header/Header"
 import axios from "axios"
+import './Apropos.scss'
 
 const Apropos: FC = () => {
     const [data, setData] = useState([])
@@ -12,7 +13,7 @@ const Apropos: FC = () => {
     }, [])
 
     return (
-        <div>
+        <div className="container__apropro">
             <Header/>
             <Banniere isHome={false} />
             {
