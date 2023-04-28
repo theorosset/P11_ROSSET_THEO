@@ -42,10 +42,15 @@
     }
 }
 
-.header__nav--link::after {
-       
-  }
-  
-  .hover-underline-animation:hover::after {
-    
-  }
+@media screen and (max-width: 500px) {
+    .header {
+        & > img {
+            width: 135px;
+            margin-left: 1rem;
+        }
+        &__nav {
+            width: 8rem;
+            margin-right: 1rem;
+        }
+    }
+}

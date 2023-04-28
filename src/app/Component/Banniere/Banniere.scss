@@ -23,3 +23,16 @@
         font-size: 25px;
     }
 }
+
+
+@media screen and (max-width: 500px) {
+    .banniere {
+        &__text {
+            top: 25% ;
+            left: 8%;
+            text-align: initial;
+            transform: none;
+            max-width: 200px;
+        }
+    }
+}
