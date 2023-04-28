@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import './Carousel.scss'
 import { Article } from "../../Models/articles";
 
-const Carousel = ({ article }: any) => {
+interface Props {
+    article: Article
+}
+
+const Carousel: FC<Props> = ({ article }) => {
     const [imageRead, setImageRead] = useState(0);
 
     function getNextImage() {

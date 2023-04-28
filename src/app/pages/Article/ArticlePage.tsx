@@ -17,7 +17,7 @@ const ArticlePage: FC = () => {
         .catch((err) =>  console.error(err))
     }, [])
     
-    console.log(article)
+
     if (!article) {
         return <p>is Loading</p>
     } 
@@ -43,7 +43,7 @@ const ArticlePage: FC = () => {
             </div>
             <div className="container__articlePage__collapse">
                 <Collapse text={article?.description} title="Description"  marginUse={true} />
-                <Collapse text={article?.equipments}  title="Equipement"/>
+                <Collapse equipments={article?.equipments}  title="Equipement" marginUse={false}/>
             </div>
         </div>
     )

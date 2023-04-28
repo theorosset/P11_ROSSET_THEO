@@ -12,7 +12,7 @@ export interface Article {
     host: host
     rating: number
     location: number
-    equipments: string
+    equipments: string[]
     tags: string[]
 }
 
