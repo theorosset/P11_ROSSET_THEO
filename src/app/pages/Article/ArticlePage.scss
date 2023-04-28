@@ -62,3 +62,25 @@
         margin: auto;
     }
 }
+
+
+@media screen and (max-width: 500px) {
+.container__articlePage {
+
+        &__description {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        &__collapse {
+            display: flex;
+            flex-direction: column;
+            max-width: 1250px;
+            margin: auto;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+    }
+}
