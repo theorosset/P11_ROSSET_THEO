@@ -1,1 +1,32 @@
+@import '/src/app/sass/main.scss';
 
+.container__carousel {
+    max-width: 1240px;
+    margin: auto;
+    margin-top: 1rem;
+    position: relative;
+    text-align: center;
+    &--img {
+        width: 100%;
+        height: 445px;
+        object-fit: cover;
+        border-radius: $radius-large;
+    }
+
+     &--iconLeft {
+        position: absolute;
+        top: 50%;
+        left: 4%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+        color: white;
+    }
+     &--iconRight {
+        position: absolute;
+        top: 50%;
+        right: 3%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+        color: white;
+    }
+}

@@ -2,7 +2,7 @@
 
 
 .container__collapse {
-    max-width: 1023px;
+    max-width: 900px;
     margin: auto;
     width: 100%;
     margin-top: 2rem;
@@ -10,7 +10,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 90%;
         margin: auto;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -25,7 +24,7 @@
         z-index: -2;
         background-color: $secondary-color;
         margin: auto;
-        width: 93.1%;
+        width: 100%;
         border-radius: $radius-small;
 
         & > p {
@@ -36,4 +35,8 @@
             color: $primary-color;
         }
     }
+}
+
+.collapse--margin {
+    margin-right: 1rem;
 }

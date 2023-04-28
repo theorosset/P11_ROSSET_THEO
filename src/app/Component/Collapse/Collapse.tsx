@@ -6,10 +6,11 @@ import "./Collapse.scss"
 
 const propTypes = {
     title: PropTypes.string,
-    text: PropTypes.string
+    text: PropTypes.string,
+    marginUse: PropTypes.bool
 };
 
-const Collapse: FC<InferProps<typeof propTypes>> = ({title, text}) => {
+const Collapse: FC<InferProps<typeof propTypes>> = ({title, text, marginUse}) => {
    const [isShow, setIsShow] = useState<Boolean>()
 
     function openCollapse() {
@@ -18,7 +19,7 @@ const Collapse: FC<InferProps<typeof propTypes>> = ({title, text}) => {
     }
 
     return (
-        <div className="container__collapse">
+        <div className={`container__collapse ${marginUse ? "margin" : ""}`}>
             <div className="container__collapse__title" onClick={openCollapse}>
                 <p>{ title }</p>
                 <i className={`fas fa-chevron-${isShow ? 'up' : 'down'}`}></i>

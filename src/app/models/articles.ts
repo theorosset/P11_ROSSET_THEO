@@ -1,13 +1,18 @@
 
+type host  = {
+    name: string,
+    picture: string,
+}
 export interface Article {
     id: string
     title: string
     cover: string
     pictures: string[]
     description: string
-    host: object
+    host: host
     rating: number
     location: number
-    equipements: string[]
+    equipments: string
     tags: string[]
 }
+

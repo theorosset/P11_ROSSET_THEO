@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import './Carousel.scss'
+import { Article } from "../../Models/articles";
 
-const Carousel = ({ article } : any ) => {
+const Carousel = ({ article }: any) => {
     const [imageRead, setImageRead] = useState(0);
 
     function getNextImage() {
@@ -21,9 +23,14 @@ const Carousel = ({ article } : any ) => {
     }
 
     return (
-        <div>
-            <img src={ article?.pictures[imageRead] } onClick={getPrevImage} alt="appartement"/>
-            <h1>{article?.id} oui</h1>
+        <div className="container__carousel">
+            <img className="container__carousel--img" src={ article?.pictures[imageRead] } onClick={getPrevImage} alt="appartement"/>
+            { article?.pictures.length > 1 &&
+            <div>
+                <i onClick={getPrevImage} className="container__carousel--iconLeft fas fa-chevron-left"></i>
+                <i onClick={getNextImage} className="container__carousel--iconRight fas fa-chevron-right"></i>
+            </div>
+            }
         </div>
     )
 }
