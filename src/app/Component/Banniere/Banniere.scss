@@ -26,18 +26,22 @@
 
 
 @media screen and (max-width: 500px) {
-.banniere {
+    .banniere {
         &__image {
             height: 133px;
             border-radius: $radius-medium;
         }
         &__text {
-            top: 10% ;
+            top: 10%;
             left: 8%;
             text-align: initial;
             transform: none;
-            max-width: 200px;
+            max-width: 222px;
             
         }
+    }
+
+    .apropo {
+        height: 223px;
     }
 }

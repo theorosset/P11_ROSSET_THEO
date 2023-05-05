@@ -20,7 +20,7 @@ const Banniere: FC<InferProps<typeof propTypes>> = ({isHome}) => {
     } else {
         return (
             <div className="banniere">
-                <img className="banniere__image" src={BanniereApropos} alt="Banniere home"></img>
+                <img className="banniere__image apropo" src={BanniereApropos} alt="Banniere home"></img>
             </div>
             )
     }
