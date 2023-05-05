@@ -1,0 +1,48 @@
+@import '../../sass/main.scss';
+
+
+.container__404 {
+    color: $primary-color;
+    max-width: 1280px;
+    margin: auto;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        & > h1 {
+            font-size: 190px;
+            margin-top: 4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        & > p {
+            font-size: 25px;
+            margin-bottom: 9rem;
+            text-align: center;
+        }
+
+        & > a {
+            color: $primary-color;
+            text-decoration: underline;
+            margin-bottom: 7rem;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container__404 {
+        color: $primary-color;
+        max-width: 1280px;
+
+        &__item {
+            & > h1 {
+                font-size: 120px;
+            }
+            & > p {
+                font-size: 20px;
+            }
+        }
+    }
+}

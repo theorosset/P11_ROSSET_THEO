@@ -18,9 +18,9 @@ const ArticleList: FC = () => {
         <ul className="container__article">
             {
                 articles.map((article: Article) => (
-                    <NavLink to={`/article?id=${article.id}`} className="container__article__link" key={article.id}>
-                        <img className="container__article__link--img" src={article.cover} alt={article.title} />
-                        <p className="container__article__link--title">{article.title}</p>
+                    <NavLink to={`/article?id=${ article.id }`} className="container__article__link" key={ article.id }>
+                        <img className="container__article__link--img" src={ article.cover } alt={ article.title } />
+                        <p className="container__article__link--title">{ article.title }</p>
                     </NavLink>
                 ))
             }

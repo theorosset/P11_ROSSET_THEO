@@ -1,12 +1,13 @@
 import Carousel from "../../Component/Carousel/Carousel"
 import { Article } from "../../Models/articles";
-import { useSearchParams } from "react-router-dom";
+import { Route, Routes, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { FC, useEffect, useState } from "react";
 import Header from "../../Component/Header/Header";
 import { Collapse } from "../../Component/Collapse/Collapse";
 import Vendor from "../../Component/vendor/Vendor";
 import RateAppartement from "../../Component/rateAppartement/RateAppartement"
+import Page404 from "../Page404/Page404";
 import './ArticlePage.scss'
 
 const ArticlePage: FC = () => {
@@ -20,7 +21,11 @@ const ArticlePage: FC = () => {
     }, [])
 
     if (!article) {
-        return <p>is Loading</p>
+        return (
+        <Routes>
+            <Route path="*" Component={Page404} />
+        </Routes>
+        )
     }
     
     return (
@@ -29,22 +34,22 @@ const ArticlePage: FC = () => {
             <Carousel article={ article } />
             <div className="container__articlePage__description">
                 <div className="container__articlePage__description--appartement">
-                    <h1 className="container__articlePage__description--title">{ article?.title }</h1>
-                    <p className="container__articlePage__description--subtitle">{ article?.title }</p>
+                    <h1 className="container__articlePage__description--title">{ article.title }</h1>
+                    <p className="container__articlePage__description--subtitle">{ article.title }</p>
                     <ul className="container__articlePage__description--tags">
-                        {article?.tags.map((tag: string, index: number) => (
+                        { article.tags.map((tag: string, index: number) => (
                             <li key={ index }>{ tag }</li> 
-                        ))}
+                        )) }
                     </ul>
                 </div>
                 <div className="container__articlePage__vendor">
-                    <Vendor host={article.host} rating={article.rating}/>
-                    <RateAppartement rating={article.rating}/>
+                    <Vendor host={ article.host } rating={ article.rating }/>
+                    <RateAppartement rating={ article.rating }/>
                 </div>
             </div>
             <div className="container__articlePage__collapse">
-                <Collapse text={article?.description} title="Description"  marginUse={true} />
-                <Collapse equipments={article?.equipments}  title="Equipement" marginUse={false}/>
+                <Collapse text={ article.description } title="Description"  marginUse={ true } />
+                <Collapse equipments={ article.equipments }  title="Equipement" marginUse={ false }/>
             </div>
         </div>
     )
