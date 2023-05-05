@@ -5,6 +5,7 @@ import axios from "axios";
 import { FC, useEffect, useState } from "react";
 import Header from "../../Component/Header/Header";
 import { Collapse } from "../../Component/Collapse/Collapse";
+import RateAppartement from "../../Component/rateAppartement/RateAppartement";
 import './ArticlePage.scss'
 
 const ArticlePage: FC = () => {
@@ -40,11 +41,7 @@ const ArticlePage: FC = () => {
                         <p className="container__articlePage__description__user--name">{ article?.host.name }</p>
                         <img className="container__articlePage__description__user--img" src={ article?.host.picture } alt="vendeur" />
                     </div>
-                     {
-                        Array.from({length: 5},(_, i) => (
-                            <i key={i} className={`${article.rating < i + 1 ? 'starGrey' : 'starColor'} fas fa-star`}></i>
-                        ))
-                     }
+                    <RateAppartement rating={article.rating}/>
                 </div>
             </div>
             <div className="container__articlePage__collapse">

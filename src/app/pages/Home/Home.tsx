@@ -5,7 +5,7 @@ import { FC } from 'react';
 
 const  App: FC = () => {
   return (
-    <div className="App">
+    <div className="container__home">
           <Header />
           <Banniere isHome={true}/>
           <div>

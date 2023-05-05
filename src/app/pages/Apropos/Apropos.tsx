@@ -10,7 +10,7 @@ const Apropos: FC = () => {
     const [data, setData] = useState<aProposData[]>([])
 
     useEffect(() => {
-        axios.get<aProposData[]>('./Apropos.json').then((res) => setData(res.data)).catch((err) => console.log(err))
+        axios.get<aProposData[]>('./Apropos.json').then((res) => setData(res.data)).catch((err) => console.error(err))
     }, [])
 
     return (
