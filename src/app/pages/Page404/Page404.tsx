@@ -1,4 +1,4 @@
-import Header from "../../Component/Header/Header"
+import Header from "../../Component/header/Header"
 import { NavLink } from "react-router-dom"
 import './Page404.scss'
 

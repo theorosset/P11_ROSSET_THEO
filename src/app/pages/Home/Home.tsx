@@ -1,6 +1,6 @@
-import Header from '../../Component/Header/Header';
-import Banniere from '../../Component/Banniere/Banniere';
-import ArticleList from '../../Component/Article/ArticleList';  
+import Header from '../../Component/header/Header';
+import Banniere from '../../Component/banniere/Banniere';
+import ArticleList from '../../Component/article/ArticleList';  
 import { FC } from 'react';
 
 const  App: FC = () => {

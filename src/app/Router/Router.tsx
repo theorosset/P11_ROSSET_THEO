@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from '../../App';
-import Apropos from "../Pages/Apropos/Apropos";
+import Apropos from "../Pages/apropos/Apropos";
 import ArticlePage from "../Pages/Article/ArticlePage";
-import Page404 from "../Pages/Page404/Page404";
+import Page404 from "../Pages/page404/Page404";
 
 const router = createBrowserRouter([
     {

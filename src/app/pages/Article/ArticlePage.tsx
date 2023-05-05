@@ -1,13 +1,13 @@
-import Carousel from "../../Component/Carousel/Carousel"
+import Carousel from "../../Component/carousel/Carousel"
 import { Article } from "../../Models/articles";
 import { Route, Routes, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { FC, useEffect, useState } from "react";
-import Header from "../../Component/Header/Header";
-import { Collapse } from "../../Component/Collapse/Collapse";
+import Header from "../../Component/header/Header";
+import { Collapse } from "../../Component/collapse/Collapse";
 import Vendor from "../../Component/vendor/Vendor";
 import RateAppartement from "../../Component/rateAppartement/RateAppartement"
-import Page404 from "../Page404/Page404";
+import Page404 from "../page404/Page404";
 import './ArticlePage.scss'
 
 const ArticlePage: FC = () => {

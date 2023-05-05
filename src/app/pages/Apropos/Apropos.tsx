@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react"
-import Banniere from "../../Component/Banniere/Banniere"
-import { Collapse } from "../../Component/Collapse/Collapse"
-import Header from "../../Component/Header/Header"
+import Banniere from "../../Component/banniere/Banniere"
+import { Collapse } from "../../Component/collapse/Collapse"
+import Header from "../../Component/header/Header"
 import axios from "axios"
 import './Apropos.scss'
 import { aProposData } from "../../Models/aProposData"
