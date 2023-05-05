@@ -3,11 +3,6 @@ import "./RateAppartement.scss"
 import { Article } from "../../Models/articles";
 
 
-interface Props {
-    article: Article
-}
-
-
 const RateAppartement: FC<Partial<Article>> = ({rating}) => {
     
     return (

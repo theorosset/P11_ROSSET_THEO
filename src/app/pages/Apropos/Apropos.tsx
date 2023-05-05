@@ -14,14 +14,16 @@ const Apropos: FC = () => {
     }, [])
 
     return (
-        <div className="container__apropro">
+        <div className="container__apropos">
             <Header/>
             <Banniere isHome={false} />
-            {
-                data.map((element: {title: string, text: string, id: number}) => 
-                    <Collapse key={element.id} title={element.title} text={element.text} />
-                )
-            }
+            <div className="container__apropos__collapse">
+                {
+                    data.map((element: {title: string, text: string, id: number}) => 
+                        <Collapse key={element.id} title={element.title} text={element.text} />
+                    )
+                }
+            </div>
         </div>
     )
 }
