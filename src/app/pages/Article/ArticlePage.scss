@@ -30,7 +30,7 @@
 
         &--tags {
             display: flex;
-            justify-content: left;
+            justify-content: flex-start;
             padding-left: 0;
             
              & li {
@@ -66,6 +66,10 @@
             &--appartement {
                 width: 100%;
             }
+            &--tags {
+                font-size: 14px;
+               width: 100%;
+            }
         }
 
         &__vendor {
@@ -84,6 +88,15 @@
             margin: auto;
             margin-right: 1rem;
             margin-left: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 367px) {
+    .container__articlePage__description--tags {
+        flex-wrap: wrap;
+        & > li {
+            margin-bottom: 1rem;
         }
     }
 }
