@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import './Carousel.scss'
 import { Article } from "../../Models/articles";
 
