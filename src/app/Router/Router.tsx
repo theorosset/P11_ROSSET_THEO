@@ -14,8 +14,9 @@ const router = createBrowserRouter([
       element: <Apropos />,
     },
     {
-      path: '/article',
+      path: '/article/*',
       element: <ArticlePage />,
+      errorElement: <Page404/>
     },
     {
       path: '/*',
