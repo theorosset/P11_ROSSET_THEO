@@ -5,7 +5,6 @@ import './ArticleList.scss'
 import { NavLink } from "react-router-dom"
 import { Article } from "../../Models/articles"
 
-//@TODO: type articles was create but cant use in state search who can set it 
 
 const ArticleList: FC = () => {
     const [articles, setArticle] = useState<Article[]>([])
