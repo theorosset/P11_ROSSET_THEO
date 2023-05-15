@@ -12,7 +12,13 @@
         object-fit: cover;
         border-radius: $radius-large;
     }
-
+    &--imageNumber {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        color: white;
+        font-weight: 600;
+    }
      &--iconLeft {
         position: absolute;
         top: 50%;

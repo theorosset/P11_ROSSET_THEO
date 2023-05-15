@@ -33,6 +33,7 @@ const Carousel: FC<Props> = ({ article }) => {
             <div>
                 <i onClick={getPrevImage} className="container__carousel--iconLeft fas fa-chevron-left"></i>
                 <i onClick={getNextImage} className="container__carousel--iconRight fas fa-chevron-right"></i>
+                <p className="container__carousel--imageNumber">{imageRead + 1} / { article?.pictures.length }</p>
             </div>
             }
         </div>
