@@ -35,7 +35,7 @@ const ArticlePage: FC = () => {
             <div className="container__articlePage__description">
                 <div className="container__articlePage__description--appartement">
                     <h1 className="container__articlePage__description--title">{ article.title }</h1>
-                    <p className="container__articlePage__description--subtitle">{ article.title }</p>
+                    <p className="container__articlePage__description--subtitle">{ article.location }</p>
                     <ul className="container__articlePage__description--tags">
                         { article.tags.map((tag: string, index: number) => (
                             <li key={ index }>{ tag }</li> 
